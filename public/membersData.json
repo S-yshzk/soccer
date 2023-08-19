@@ -1,0 +1,142 @@
+[
+    {
+        "id":"1",
+        "pos":"GK",
+        "name":"アレックス・レミロ(Alex Remiro)"
+    },
+    {
+        "id":"13",
+        "pos":"GK",
+        "name":"アンドニ・スビアウレ(Andoni Zubiaurre)"
+    },
+    {
+        "id":"24",
+        "pos":"CB",
+        "name":"ロビン・ル・ノルマン(Robin Le Normand)"
+    },
+    {
+        "id":"5",
+        "pos":"CB",
+        "name":"イゴール・スベルディア(Igor Zubeldia)"
+    },
+    {
+        "id":"6",
+        "pos":"CB",
+        "name":"アリス・エルストンド(Aritz Elustondo)"
+    },
+    {
+        "id":"20",
+        "pos":"CB",
+        "name":"ホン・パチェコ(Jon Pacheco)"
+    },
+    {
+        "id":"18",
+        "pos":"RSB",
+        "name":"アンドニ・ゴロサベル(Andoni Gorosabel)"
+    },
+    {
+        "id":"2",
+        "pos":"RSB",
+        "name":"アレックス・ソラ(Álex Sola)"
+    },
+    {
+        "id":"12",
+        "pos":"LSB",
+        "name":"アイエン・ムニョス(Aihen Muñoz)"
+    },
+    {
+        "id":"15",
+        "pos":"LSB",
+        "name":"ディエゴ・リコ(Diego Rico)"
+    },
+    {
+        "id":"8",
+        "pos":"CM",
+        "name":"ミケル・メリーノ(Mikel Merino)"
+    },
+    {
+        "id":"3",
+        "pos":"CM",
+        "name":"マルティン・スビメンディ(Martín Zubimendi)"
+    },
+    {
+        "id":"16",
+        "pos":"CM",
+        "name":"アンデル・ゲバラ(Ander Guevara)"
+    },
+    {
+        "id":"4",
+        "pos":"CM",
+        "name":"アシエル・イジャラメンディ(Asier Illarramendi)"
+    },
+    {
+        "id":"22",
+        "pos":"CM",
+        "name":"ベニャト・トゥリエンテス(Beñat Turrientes)"
+    },
+    {
+        "id":"23",
+        "pos":"AM",
+        "name":"ブライス・メンデス(Brais Méndez)"
+    },
+    {
+        "id":"21",
+        "pos":"AM",
+        "name":"ダビド・シルバ(David Silva)"
+    },
+    {
+        "id":"17",
+        "pos":"AM",
+        "name":"ロベルト・ナバーロ(Robert Navarro)"
+    },
+    {
+        "id":"42",
+        "pos":"AM",
+        "name":"パブロ・マリン(Pablo Marín)"
+    },
+    {
+        "id":"34",
+        "pos":"AM",
+        "name":"(Jon Magunazelaia)"
+    },
+    {
+        "id":"14",
+        "pos":"RW",
+        "name":"久保 建英(Takefusa Kubo)"
+    },
+    {
+        "id":"10",
+        "pos":"LW",
+        "name":"ミケル・オジャルサバル(Mikel Oyarzabal)"
+    },
+    {
+        "id":"7",
+        "pos":"LW",
+        "name":"アンデル・バレネチェア(Ander Barrenetxea)"
+    },
+    {
+        "id":"25",
+        "pos":"CF",
+        "name":"ウマル・サディク(Umar Sadiq)"
+    },
+    {
+        "id":"11",
+        "pos":"CF",
+        "name":"モハメド=アリ・チョー(Mohamed-Ali Cho)"
+    },
+    {
+        "id":"19",
+        "pos":"CF",
+        "name":"アレクサンダー・セルロート(Alexander Sörloth)"
+    },
+    {
+        "id":"9",
+        "pos":"CF",
+        "name":"カルロス・フェルナンデス(Carlos Fernández)"
+    },
+    {
+        "id":"33",
+        "pos":"CF",
+        "name":"ジョン・カリカブル(Jon Karrikaburu)"
+    }
+]
