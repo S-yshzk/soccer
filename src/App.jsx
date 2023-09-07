@@ -376,7 +376,6 @@ function App() {
     const [player2, setPlayer2] = useState(null);
     const [match, setMatch] = useState(null);
     const [judge1, setJudge1] = useState(false);
-    const h = 740;
     const changePlayer = (item) => {
         if (player1 === null) {
             setPlayer1(item);
