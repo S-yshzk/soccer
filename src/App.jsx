@@ -90,7 +90,6 @@ const Member = (props) => {
         } else {
             props.changePlayer(null);
         }
-        console.log(props.player);
     }
     return (
         props.data.map((item, index) => {
