@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import React, { useEffect, useState } from "react";
-import { PieChart, Pie, Cell, Label, Tooltip } from 'recharts'
+import { PieChart, Pie, Cell, Tooltip } from 'recharts'
 import './App.css'
 
 const DrawChart = (props) => {
@@ -56,7 +56,7 @@ const DrawChart = (props) => {
 
                 let opacity = 1;
 
-                if (item.members.some(i => i == props.player) === false && props.player !== null) {
+                if (item.members.some(i => i === props.player) === false && props.player !== null) {
                     opacity = 0.15;
                 }
 
@@ -148,7 +148,7 @@ const DrawPlayerStats = (props) => {
     let drawCount = 0;
     let loseCount = 0;
     for (const item of props.matchData) {
-        if (item.members.some(i => i == props.player) || props.player === null) {
+        if (item.members.some(i => i === props.player) || props.player === null) {
             if (item.stats.result === "win") {
                 sum++;
                 winCount++;
@@ -172,7 +172,7 @@ const DrawPlayerStats = (props) => {
     let t2 = null;
     if (props.player !== null) {
         for (const item of props.membersData) {
-            if(item.id == props.player) {
+            if(item.id === props.player) {
                 t1 = item.name;
                 t2 = "先発時の戦績";
             }
