@@ -29,8 +29,6 @@ const DrawChart = (props) => {
         <div style={{ userSelect: "none" }}>
             <svg width="100%" height={200}>
                 <g transform="translate(80,0)" style={{ userSelect: "none" }}>
-                    {/* <rect x={x(date[0])} y={1 / 8 * h} width={x(date[11]) - x(date[0])} height={1 / 4 * h} fill="#1e90ff" opacity={0.4}></rect>
-            <rect x={x(date[0])} y={5 / 8 * h} width={x(date[11]) - x(date[0])} height={1 / 4 * h} fill="#1e90ff" opacity={0.4}></rect> */}
                     <text textAnchor="middle" dominantBaseline="middle" x={10} y={h / 4}>LaLiga</text>
                     <text textAnchor="middle" dominantBaseline="middle" x={10} y={h / 2}>EL</text>
                     <text textAnchor="middle" dominantBaseline="middle" x={-15} y={(3 / 4) * h}>COPA DELREY</text>
@@ -142,42 +140,12 @@ const Member = (props) => {
                 </table>
             </div>
         </div>
-        //     if (count === 15) {
-        //         pos += 410;
-        //         count = 0;
-        //     }
-        //     count += 1;
-        //     let c = 'black'
-        //     if (props.player1 === item.id) {
-        //         c = 'blue'
-        //     }
-        //     return (
-        //         <g transform="translate(0, 50)">
-        //             <line x1={pos} y1={space * count} x2={pos + 410} y2={space * count} stroke="black"></line>
-        //             <line x1={pos} y1={space * count} x2={pos} y2={space * (count + 1)} stroke="black"></line>
-        //             <text onClick={() => change(item.id)} textAnchor="left" dominantBaseline="middle" x={pos + 5} y={(count + (1 / 2)) * space} stroke={c}>{item.pos + item.id + item.name}</text>
-        //             <line x1={pos + 410} y1={space * count} x2={pos + 410} y2={space * (count + 1)} stroke="black"></line>
-        //             <line x1={pos} y1={space * (count + 1)} x2={pos + 410} y2={space * (count + 1)} stroke="black"></line>
-        //         </g>
-        //     )
-        // })
     )
 }
 
 const DrawMatchStats = (props) => {
     if (props.judge1) {
         return (
-            // <svg width={300} height={300}>
-            //     <g transform="translate(0, 0)">
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={head}>ligue:{props.match.ligue}</text>
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={head + space * 1}>節:{props.match.id}</text>
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={head + space * 2}>date:{props.match.date}</text>
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={head + space * 3}>相手:{props.match.op}</text>
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={head + space * 4}>結果：{props.match.stats.result}</text>
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={head + space * 5}>スコア：{props.match.stats.score}</text>
-            //         <text textAnchor="middle" dominantBaseline="middle" x={40} y={-20} fontFamily="Arial" fontSize={20}>試合情報</text>
-            //     </g>
-            // </svg>
             <table className="table is-bordered is-narrow is-half">
                 <thead>
                     <tr>
@@ -423,16 +391,6 @@ function App() {
                     <DrawPlayerStats matchData={matchesData} player1={player1} membersData={membersData} player2={player2}></DrawPlayerStats>
                     <DrawMatchStats match={matchesData[match]} judge1={judge1} ></DrawMatchStats>
                 </div>
-                {/* <div className="column">
-                <DrawChart data={matchesData} h={h} player1={player1} changeMatch={changeMatch} match={match} changeJudge1={changeJudge1}></DrawChart>
-            </div> */}
-                {/* <svg width={w} height={h} style={{ position: 'absolute', top: 0, left: 0 }}>
-                    <rect x={850} y={10} width={250} height={500} fill="#1e90ff" stroke="black" opacity={0.5}></rect>
-                    
-                    <DrawMatchStats match={matchesData[match]} judge1={judge1} ></DrawMatchStats>
-                    <DrawChart data={matchesData} h={h} player1={player1} changeMatch={changeMatch} match={match} changeJudge1={changeJudge1}></DrawChart>
-            </svg>
-            <DrawPlayer1Stats matchData={matchesData} player1={player1} membersData={membersData}></DrawPlayer1Stats> */}
             </div>
             <div className="columns">
                 <div className="column">
