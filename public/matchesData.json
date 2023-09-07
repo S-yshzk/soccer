@@ -9,9 +9,7 @@
         "sub":[4, 7, 11, 33],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -24,9 +22,7 @@
         "sub":[18, 27, 29, 11, 33],
         "stats": {
             "result": "lose",
-            "score": "1-4",
-            "goal":[],
-            "assist":[]
+            "score": "1-4"
         }
     },
     {
@@ -39,9 +35,7 @@
         "sub":[6, 20, 4, 7, 33],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -54,9 +48,7 @@
         "sub":[6, 2, 7, 14, 25],
         "stats": {
             "result": "draw",
-            "score": "1-1",
-            "goal":[],
-            "assist":[]
+            "score": "1-1"
         }
     },
     {
@@ -69,9 +61,7 @@
         "sub":[18, 21, 23, 11, 33],
         "stats": {
             "result": "lose",
-            "score": "1-2",
-            "goal":[],
-            "assist":[]
+            "score": "1-2"
         }
     },
     {
@@ -84,9 +74,7 @@
         "sub":[5, 22, 11],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -99,9 +87,7 @@
         "sub":[2, 16, 22, 17, 9],
         "stats": {
             "result": "win",
-            "score": "5-3",
-            "goal":[],
-            "assist":[]
+            "score": "5-3"
         }
     },
     {
@@ -114,9 +100,7 @@
         "sub":[24, 22, 17, 11, 9],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -129,9 +113,7 @@
         "sub":[6, 15, 8, 17, 7],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -144,9 +126,7 @@
         "sub":[24, 4, 3, 17, 9],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -159,9 +139,7 @@
         "sub":[4, 22, 17, 42, 33],
         "stats": {
             "result": "lose",
-            "score": "0-1",
-            "goal":[],
-            "assist":[]
+            "score": "0-1"
         }
     },
     {
@@ -174,9 +152,7 @@
         "sub":[6, 17, 34, 33],
         "stats": {
             "result": "lose",
-            "score": "0-2",
-            "goal":[],
-            "assist":[]
+            "score": "0-2"
         }
     },
     {
@@ -189,9 +165,7 @@
         "sub":[20, 18, 16, 34],
         "stats": {
             "result": "draw",
-            "score": "win",
-            "goal":[],
-            "assist":[]
+            "score": "win"
         }
     },
     {
@@ -204,9 +178,7 @@
         "sub":[5, 16, 17, 42, 14],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -219,9 +191,7 @@
         "sub":[18, 4, 17, 10, 28],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -234,9 +204,7 @@
         "sub":[16, 42, 17, 10, 28],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -249,9 +217,7 @@
         "sub":[18, 4, 17, 7, 10],
         "stats": {
             "result": "win",
-            "score": "3-1",
-            "goal":[],
-            "assist":[]
+            "score": "3-1"
         }
     },
     {
@@ -264,9 +230,7 @@
         "sub":[31, 17, 10, 28, 9],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -279,9 +243,7 @@
         "sub":[15, 31, 17, 42, 9],
         "stats": {
             "result": "draw",
-            "score": "0-0",
-            "goal":[],
-            "assist":[]
+            "score": "0-0"
         }
     },
     {
@@ -294,9 +256,7 @@
         "sub":[12, 31, 23, 10, 9],
         "stats": {
             "result": "lose",
-            "score": "0-1",
-            "goal":[],
-            "assist":[]
+            "score": "0-1"
         }
     },
     {
@@ -309,9 +269,7 @@
         "sub":[2, 8, 17, 42, 9],
         "stats": {
             "result": "win",
-            "score": "3-2",
-            "goal":[],
-            "assist":[]
+            "score": "3-2"
         }
     },
     {
@@ -324,9 +282,7 @@
         "sub":[2, 8, 42, 17, 9],
         "stats": {
             "result": "draw",
-            "score": "1-1",
-            "goal":[],
-            "assist":[]
+            "score": "1-1"
         }
     },
     {
@@ -339,9 +295,7 @@
         "sub":[12, 2, 4, 9],
         "stats": {
             "result": "lose",
-            "score": "0-1",
-            "goal":[],
-            "assist":[]
+            "score": "0-1"
         }
     },
     {
@@ -354,9 +308,7 @@
         "sub":[2, 21, 11, 19],
         "stats": {
             "result": "draw",
-            "score": "0-0",
-            "goal":[],
-            "assist":[]
+            "score": "0-0"
         }
     },
     {
@@ -369,9 +321,7 @@
         "sub":[14, 11, 19],
         "stats": {
             "result": "draw",
-            "score": "1-1",
-            "goal":[],
-            "assist":[]
+            "score": "1-1"
         }
     },
     {
@@ -384,9 +334,7 @@
         "sub":[16, 7, 10, 11],
         "stats": {
             "result": "win",
-            "score": "draw",
-            "goal":[],
-            "assist":[]
+            "score": "draw"
         }
     },
     {
@@ -399,9 +347,7 @@
         "sub":[2, 4, 7, 10, 11],
         "stats": {
             "result": "lose",
-            "score": "0-2",
-            "goal":[],
-            "assist":[]
+            "score": "0-2"
         }
     },
     {
@@ -414,9 +360,7 @@
         "sub":[6, 4, 7, 11, 19],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -429,9 +373,7 @@
         "sub":[6, 17, 7, 11, 19],
         "stats": {
             "result": "lose",
-            "score": "0-2",
-            "goal":[],
-            "assist":[]
+            "score": "0-2"
         }
     },
     {
@@ -444,9 +386,7 @@
         "sub":[4, 23, 14, 11, 9],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -459,9 +399,7 @@
         "sub":[6, 8, 21, 7, 9],
         "stats": {
             "result": "draw",
-            "score": "0-0",
-            "goal":[],
-            "assist":[]
+            "score": "0-0"
         }
     },
     {
@@ -474,9 +412,7 @@
         "sub":[18, 23, 10, 14, 19],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -489,9 +425,7 @@
         "sub":[20, 6, 4, 7, 9],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -504,9 +438,7 @@
         "sub":[20, 7, 9],
         "stats": {
             "result": "draw",
-            "score": "2-2",
-            "goal":[],
-            "assist":[]
+            "score": "2-2"
         }
     },
     {
@@ -519,9 +451,7 @@
         "sub":[20, 18, 42, 14, 9],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -534,9 +464,7 @@
         "sub":[6, 23, 7, 19],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -549,9 +477,7 @@
         "sub":[18, 23, 7, 11, 9],
         "stats": {
             "result": "lose",
-            "score": "1-2",
-            "goal":[],
-            "assist":[]
+            "score": "1-2"
         }
     },
     {
@@ -564,9 +490,7 @@
         "sub":[8, 16, 10, 11, 9],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -579,9 +503,7 @@
         "sub":[18, 8, 23, 34, 19],
         "stats": {
             "result": "win",
-            "score": "4-1",
-            "goal":[],
-            "assist":[]
+            "score": "4-1"
         }
     },
     {
@@ -594,9 +516,7 @@
         "sub":[20, 16, 42, 28, 33],
         "stats": {
             "result": "win",
-            "score": "5-0",
-            "goal":[],
-            "assist":[]
+            "score": "5-0"
         }
     },
     {
@@ -609,9 +529,7 @@
         "sub":[6, 15, 3, 42, 10],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -624,9 +542,7 @@
         "sub":[6, 4, 42, 14, 9],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -639,9 +555,7 @@
         "sub":[12, 31, 17, 7, 9],
         "stats": {
             "result": "lose",
-            "score": "0-1",
-            "goal":[],
-            "assist":[]
+            "score": "0-1"
         }
     },
     {
@@ -654,9 +568,7 @@
         "sub":[2, 22, 7, 11, 19],
         "stats": {
             "result": "win",
-            "score": "1-0",
-            "goal":[],
-            "assist":[]
+            "score": "1-0"
         }
     },
     {
@@ -669,9 +581,7 @@
         "sub":[18, 22, 17, 14, 19],
         "stats": {
             "result": "win",
-            "score": "2-1",
-            "goal":[],
-            "assist":[]
+            "score": "2-1"
         }
     },
     {
@@ -684,9 +594,7 @@
         "sub":[26, 4, 22, 9, 33],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -699,9 +607,7 @@
             "sub":[26, 30, 17, 14, 33],
         "stats": {
             "result": "win",
-            "score": "3-0",
-            "goal":[],
-            "assist":[]
+            "score": "3-0"
         }
     },
     {
@@ -714,9 +620,7 @@
         "sub":[26, 22, 23, 42, 34],
         "stats": {
             "result": "win",
-            "score": "2-0",
-            "goal":[],
-            "assist":[]
+            "score": "2-0"
         }
     },
     {
@@ -729,9 +633,7 @@
         "sub":[6, 5, 16, 17, 33],
         "stats": {
             "result": "lose",
-            "score": "0-1",
-            "goal":[],
-            "assist":[]
+            "score": "0-1"
         }
     },
     {
@@ -744,9 +646,7 @@
         "sub":[2, 22, 23, 10, 11],
         "stats": {
             "result": "lose",
-            "score": "0-2",
-            "goal":[],
-            "assist":[]
+            "score": "0-2"
         }
     },
     {
@@ -759,9 +659,7 @@
         "sub":[2, 14, 11, 9],
         "stats": {
             "result": "draw",
-            "score": "0-0",
-            "goal":[],
-            "assist":[]
+            "score": "0-0"
         }
     }
 ]

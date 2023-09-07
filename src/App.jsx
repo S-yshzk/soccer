@@ -148,7 +148,7 @@ const DrawPlayerStats = (props) => {
     let drawCount = 0;
     let loseCount = 0;
     for (const item of props.matchData) {
-        if (item.members.some(i => i === props.player) || props.player === null) {
+        if (item.members.some(i => String(i) === String(props.player)) || props.player === null) {
             if (item.stats.result === "win") {
                 sum++;
                 winCount++;
