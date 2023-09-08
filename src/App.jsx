@@ -195,7 +195,7 @@ const DrawMatchStats = (props) => {
 
 const DrawPlayerStats = (props) => {
     const w = 200;
-    const h = 200;
+    const h = 120;
     let sum1 = 0;
     let winCount1 = 0;
     let drawCount1 = 0;
@@ -247,16 +247,28 @@ const DrawPlayerStats = (props) => {
     let t1 = "全試合の結果"
     let t2 = null;
     let text1 = (
-        <p>選手を選択</p>
+        <>
+            <div className="block">
+                <strong>選手を選択</strong>
+            </div>
+            <div className="blck">
+                ２人まで選択可能
+            </div>
+        </>
+
     );
     let text2 = (
         <>
-            <p>全試合の結果</p>
-            <p>試合数：{sum2}</p>
-            <p>勝ち：{winCount2}</p>
-            <p>引き分け：{drawCount2}</p>
-            <p>負け：{loseCount2}</p>
-            <p>出場率：{p2}%</p>
+            <div className="block">
+                <strong>全試合の結果</strong>
+            </div>
+            <div className="block">
+                <p>試合数：{sum2}</p>
+                <p>勝ち：{winCount2}</p>
+                <p>引き分け：{drawCount2}</p>
+                <p>負け：{loseCount2}</p>
+                <p>出場率：{p2}%</p>
+            </div>
         </>
     )
     if (props.player1 !== null) {
@@ -266,28 +278,37 @@ const DrawPlayerStats = (props) => {
             if (item.id === props.player1) {
                 text1 = (
                     <>
-                    <h1>選手１</h1>
-                        <p>{t1}</p>
-                        <p>{t2}</p>
-                        <p>試合数：{sum1}</p>
-                        <p>勝ち：{winCount1}</p>
-                        <p>引き分け：{drawCount1}</p>
-                        <p>負け：{loseCount1}</p>
-                        <p>出場率：{p1}%</p>
+                        <div className="block">
+                            <strong>選手１</strong>
+                        </div>
+                        <div className="block">
+                            <p>{t1}</p>
+                            <p>{t2}</p>
+                            <p>試合数：{sum1}</p>
+                            <p>勝ち：{winCount1}</p>
+                            <p>引き分け：{drawCount1}</p>
+                            <p>負け：{loseCount1}</p>
+                            <p>出場率：{p1}%</p>
+                        </div>
                     </>
                 );
             }
             if (item.id === props.player2) {
                 text2 = (
                     <>
-                    <h2>選手２</h2>
-                        <p>{t1}</p>
-                        <p>{t2}</p>
-                        <p>試合数：{sum2}</p>
-                        <p>勝ち：{winCount2}</p>
-                        <p>引き分け：{drawCount2}</p>
-                        <p>負け：{loseCount2}</p>
-                        <p>出場率：{p2}%</p>
+                        <div className="block">
+                            <strong>選手２</strong>
+                        </div>
+                        <div className="block">
+                            <p>{t1}</p>
+                            <p>{t2}</p>
+                            <p>試合数：{sum2}</p>
+                            <p>勝ち：{winCount2}</p>
+                            <p>引き分け：{drawCount2}</p>
+                            <p>負け：{loseCount2}</p>
+                            <p>出場率：{p2}%</p>
+                        </div>
+
                     </>
                 );
             }
@@ -304,10 +325,10 @@ const DrawPlayerStats = (props) => {
     }
     return (
         <div className="columns">
-            <div className="column">
+            <div className="column box">
                 {text1}
                 <PieChart width={w} height={h}>
-                    <Pie data={playerData1} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={50} label >
+                    <Pie data={playerData1} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label >
                         {playerData1.map((entry, index) => {
                             return (
                                 <Cell key={`cell-${index}`} fill={colors[index]} />
@@ -317,10 +338,10 @@ const DrawPlayerStats = (props) => {
                     </Pie>
                 </PieChart>
             </div>
-            <div className="column">
+            <div className="column box">
                 {text2}
                 <PieChart width={w} height={h}>
-                    <Pie data={playerData2} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={50} label >
+                    <Pie data={playerData2} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label >
                         {playerData2.map((entry, index) => {
                             return (
                                 <Cell key={`cell-${index}`} fill={colors[index]} />
