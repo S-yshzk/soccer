@@ -2,7 +2,6 @@ import * as d3 from "d3";
 import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Cell, Tooltip } from 'recharts'
 import 'bulma/css/bulma.css';
-
 const DrawChart = (props) => {
 
     const w = 1400;
@@ -27,7 +26,7 @@ const DrawChart = (props) => {
 
     return (
         <div style={{ userSelect: "none" }}>
-            <svg width="100%" height={200}>
+            <svg width="100%" height={195}>
                 <g transform="translate(80,0)" style={{ userSelect: "none" }}>
                     <text textAnchor="middle" dominantBaseline="middle" x={10} y={h / 4}>LaLiga</text>
                     <text textAnchor="middle" dominantBaseline="middle" x={10} y={h / 2}>EL</text>
@@ -36,6 +35,15 @@ const DrawChart = (props) => {
                     <line x1={x(date[0])} y1={3 / 8 * h} x2={x(date[11])} y2={3 / 8 * h} stroke="black"></line>
                     <line x1={x(date[0])} y1={5 / 8 * h} x2={x(date[11])} y2={5 / 8 * h} stroke="black"></line>
                     <line x1={x(date[0])} y1={7 / 8 * h} x2={x(date[11])} y2={7 / 8 * h} stroke="black"></line>
+                    <g transform="translate(100, 190)">
+                        <circle cx={0} cy={0} r={5} fill="#32CD32"></circle>
+                        <text textAnchor="left" dominantBaseline="middle" x={10} y={0}>勝ち</text>
+                        <circle cx={60} cy={0} r={5} fill="#808080"></circle>
+                        <text textAnchor="left" dominantBaseline="middle" x={70} y={0}>引き分け</text>
+                        <circle cx={145} cy={0} r={5} fill="#D7000F"></circle>
+                        <text textAnchor="left" dominantBaseline="middle" x={155} y={0}>負け</text>
+
+                    </g>
                     {
                         date.map((item, index) => {
                             return (
@@ -63,13 +71,10 @@ const DrawChart = (props) => {
                             opacity = 0.15;
                         }
 
-                        if (props.match === index) {
-                            c = 'rgb(0, 0, 255)';
-                            opacity = 1;
-                        } else if (item.stats.result === 'win') {
-                            c = 'rgb(0, 255, 0)';
+                        if (item.stats.result === 'win') {
+                            c = '#32CD32';
                         } else if (item.stats.result === 'lose') {
-                            c = 'rgb(255, 0, 0)';
+                            c = '#D7000F';
                         } else {
                             c = 'rgb(128, 128, 128)';
                         }
@@ -90,8 +95,8 @@ const Member = (props) => {
     const data2 = props.data.slice(props.data.length / 2, props.data.length);
     return (
         <div className="columns">
-            <div className="column">
-                <table className="table is-bordered is-narrow is-half">
+            <div className="column ml-6">
+                <table className="table is-bordered is-narrow is-small">
                     <tbody>
                         {data1.map((item) => {
                             let judge1 = false;
@@ -218,7 +223,7 @@ const DrawPlayerStats = (props) => {
     const winRate1 = Math.round(winCount1 / sum1 * 100);
     const drawRate1 = Math.round(drawCount1 / sum1 * 100);
     const loseRate1 = Math.round(loseCount1 / sum1 * 100);
-    const playerData1 = [{ "name": "勝ち", "value": winRate1 }, { "name": "引き分け", "value": drawRate1 }, { "name": "負け", "value": loseRate1 }];
+    const playerData1 = [{ "name": "勝ち", "value": winRate1, "rate": winRate1 + "%" }, { "name": "引き分け", "value": drawRate1, "rate": drawRate1 + "%" }, { "name": "負け", "value": loseRate1, "rate": loseRate1 + "%" }];
 
     let sum2 = 0;
     let winCount2 = 0;
@@ -242,8 +247,8 @@ const DrawPlayerStats = (props) => {
     const winRate2 = Math.round(winCount2 / sum2 * 100);
     const drawRate2 = Math.round(drawCount2 / sum2 * 100);
     const loseRate2 = Math.round(loseCount2 / sum2 * 100);
-    const playerData2 = [{ "name": "勝ち", "value": winRate2 }, { "name": "引き分け", "value": drawRate2 }, { "name": "負け", "value": loseRate2 }];
-    const colors = ['#00ff00', '#808080', '#ff0000']
+    const playerData2 = [{ "name": "勝ち", "value": winRate2, "rate": winRate2 + '%' }, { "name": "引き分け", "value": drawRate2, "rate": drawRate2 + '%' }, { "name": "負け", "value": loseRate2, "rate": loseRate2 + '%' }];
+    const colors = ['#32CD32', '#808080', '#D7000F']
     let t1 = "全試合の結果"
     let t2 = null;
     let text1 = (
@@ -323,12 +328,22 @@ const DrawPlayerStats = (props) => {
             }
         }
     }
+    const label = ({ name, rate, cx, x, y }) => {
+        const textAnchor = x > cx ? "start" : "end";
+        const c = name === "勝ち" ? "#32CD32" : (name === "引き分け" ? "#808080" : "#D7000F");
+        return (
+            <>
+                <text x={x} y={y} textAnchor={textAnchor} dominantBaseline="middle" fill={c}>{rate}</text>
+            </>
+        )
+    }
+
     return (
         <div className="columns">
             <div className="column box">
                 {text1}
                 <PieChart width={w} height={h}>
-                    <Pie data={playerData1} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label >
+                    <Pie data={playerData1} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label={label} >
                         {playerData1.map((entry, index) => {
                             return (
                                 <Cell key={`cell-${index}`} fill={colors[index]} />
@@ -341,7 +356,7 @@ const DrawPlayerStats = (props) => {
             <div className="column box">
                 {text2}
                 <PieChart width={w} height={h}>
-                    <Pie data={playerData2} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label >
+                    <Pie data={playerData2} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label={label} >
                         {playerData2.map((entry, index) => {
                             return (
                                 <Cell key={`cell-${index}`} fill={colors[index]} />
@@ -403,14 +418,19 @@ function App() {
     }, []);
     return (
         <div>
-            <div className="title">
-                <h1 className="title is-1">レアルソシエダ戦績</h1>
-            </div>
-            <div className="columns">
+
+            <section className="hero is-info is-small">
+                <div className="hero-body">
+                    <h className="title">
+                        レアルソシエダ戦績
+                    </h>
+                </div>
+            </section>
+            <div className="columns mt-3 mb-0">
                 <Member data={membersData} changePlayer={changePlayer} player1={player1} player2={player2}></Member>
                 <div className="column">
                     <DrawPlayerStats matchData={matchesData} player1={player1} membersData={membersData} player2={player2}></DrawPlayerStats>
-                    <DrawMatchStats match={matchesData[match]} judge1={judge1} ></DrawMatchStats>
+                    {/* <DrawMatchStats match={matchesData[match]} judge1={judge1} ></DrawMatchStats> */}
                 </div>
             </div>
             <div className="columns">
