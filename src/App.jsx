@@ -17,6 +17,13 @@ const DrawChart = (props) => {
             props.changeJudge1(false);
         }
     }
+    const changeHover = (item) => {
+        props.changeHover(item);
+    }
+
+    const resetHover = () => {
+        props.changeHover(null);
+    }
 
     const x = d3.scaleLinear()
         .domain(d3.extent([0, 320]))
@@ -47,7 +54,7 @@ const DrawChart = (props) => {
                     {
                         date.map((item, index) => {
                             return (
-                                <g>
+                                <g key={index}>
                                     <line x1={x(item)} y1={1 / 8 * h} x2={x(item)} y2={7 / 8 * h} stroke="black"></line>
                                     <text textAnchor="middle" dominantBaseline="middle" x={x(item)} y={1 / 16 * h}>{mouth[index]}</text>
                                 </g>
@@ -78,9 +85,13 @@ const DrawChart = (props) => {
                         } else {
                             c = 'rgb(128, 128, 128)';
                         }
+                        let r = 5;
+                        if (props.hover === index) {
+                            r = 10;
+                        }
                         return (
                             <g>
-                                <circle onClick={() => change(index)} key={index} cx={x(item.elapsed)} index cy={pos} r={5} fill={c} opacity={opacity} style={{ cursor: "pointer", transition: "opacity 0.5s" }}></circle>
+                                <circle onClick={() => change(index)} onMouseEnter={() => changeHover(index)} onMouseLeave={() => resetHover()} key={index} cx={x(item.elapsed)} index cy={pos} r={r} fill={c} opacity={opacity} style={{ cursor: "pointer", transition: "opacity  0.5s, r 0.5s" }}></circle>
                             </g>
                         )
                     })}
@@ -149,7 +160,7 @@ const Member = (props) => {
 }
 
 const DrawMatchStats = (props) => {
-    if (props.judge1) {
+    if (props.judge1 && props.match !== undefined) {
         return (
             <table className="table is-bordered is-narrow is-half">
                 <thead>
@@ -380,6 +391,7 @@ function App() {
     const [player2, setPlayer2] = useState(null);
     const [match, setMatch] = useState(null);
     const [judge1, setJudge1] = useState(false);
+    const [hover, setHover] = useState(null);
     const changePlayer = (item) => {
         if (player1 === null) {
             setPlayer1(item);
@@ -406,6 +418,9 @@ function App() {
     const changeJudge1 = (j) => {
         setJudge1(j);
     }
+    const changeHover = (item) => {
+        setHover(item);
+    }
     useEffect(() => {
         fetch(url1).then((response) => response.json())
             .then((jsonData) => {
@@ -416,14 +431,15 @@ function App() {
                 setMembersData(jsonData);
             })
     }, []);
+    console.log(match);
     return (
         <div>
 
             <section className="hero is-info is-small">
                 <div className="hero-body">
-                    <h className="title">
-                        レアルソシエダ戦績
-                    </h>
+                    <h1 className="title">
+                        レアルソシエダ22/23シーズン戦績
+                    </h1>
                 </div>
             </section>
             <div className="columns mt-3 mb-0">
@@ -435,9 +451,22 @@ function App() {
             </div>
             <div className="columns">
                 <div className="column">
-                    <DrawChart data={matchesData} player1={player1} changeMatch={changeMatch} match={match} changeJudge1={changeJudge1}></DrawChart>
+                    <DrawChart data={matchesData} player1={player1} changeMatch={changeMatch} match={match} changeJudge1={changeJudge1} hover={hover} changeHover={changeHover}></DrawChart>
                 </div>
             </div>
+
+            <div id="modal-js-example" className={!judge1 ? "modal" : "modal is-active"}>
+                <div class="modal-background"></div>
+
+                <div class="modal-content">
+                    <div class="box">
+                       <DrawMatchStats match={matchesData[match]} judge1={judge1} ></DrawMatchStats>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close" onClick={() => {setMatch(null)
+                setJudge1(false)}}></button>
+            </div>
+
         </div>
     )
 }
