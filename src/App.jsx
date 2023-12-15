@@ -2,6 +2,7 @@ import * as d3 from "d3";
 import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Cell, Tooltip } from 'recharts'
 import 'bulma/css/bulma.css';
+import './App.css';
 const DrawChart = (props) => {
 
     const w = 1400;
@@ -351,7 +352,7 @@ const DrawPlayerStats = (props) => {
 
     return (
         <div className="columns">
-            <div className="column box">
+            <div className="column box is-marginless">
                 {text1}
                 <PieChart width={w} height={h}>
                     <Pie data={playerData1} dataKey="value" nameKey="name" cx={w / 2} cy={h / 2} startAngle={90} endAngle={-270} animationBegin={100} animationDuration={800} outerRadius={30} label={label} >

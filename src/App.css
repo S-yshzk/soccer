@@ -15,3 +15,8 @@ g{
 .DrawPlayerStats{
     user-select: none;
 }
+
+.box{
+    margin-bottom:0;
+}
+
